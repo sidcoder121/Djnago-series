@@ -1,11 +1,187 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fix my city</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1>landing page</h1>
+
+    <div class="glow-bg"></div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="logo">
+            <i data-lucide="layout-grid"></i>
+            <span>FixMyCity</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#" class="nav-item active">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="clipboard-list"></i>
+                <span>Complaints</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="map"></i>
+                <span>Map</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" aria-label="Notifications">
+                <i data-lucide="bell"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content / Hero -->
+    <main>
+        <div class="badge">
+            <span class="badge-dot"></span>
+            NEXT-GEN URBAN MANAGEMENT
+        </div>
+
+        <h1 class="hero-title">
+            Civic Action at the<br>
+            Speed of <span class="highlight">Thought</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Empowering citizens and city officials with AI-driven reporting, real-time analytics, and seamless resolution workflows.
+        </p>
+
+        <div class="cta-group">
+            <a href="#" class="btn btn-primary">
+                Start Reporting
+                <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#" class="btn btn-secondary">
+                View Live Map
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">TRUSTED BY 50+ SMART CITIES</p>
+    </footer>
+
+    
+  <div class="container">
+
+    <!-- Trusted By Logos Section -->
+    <section class="trusted-section">
+      <p class="trusted-title">TRUSTED BY 50+ SMART CITIES</p>
+      <div class="logos-grid">
+        <span>New York</span>
+        <span>London</span>
+        <span>Singapore</span>
+        <span>Tokyo</span>
+      </div>
+    </section>
+
+    <!-- Main Feature Card: Interactive Map -->
+    <div class="card card-full">
+      <div class="card-content">
+        <div class="header-inline">
+          <div class="icon-badge">
+            <i data-lucide="globe"></i>
+          </div>
+          <h2>Interactive Map</h2>
+        </div>
+        <p>
+          Visualize civic data. Spot trends, avoid hazards, and see exactly 
+          where municipal resources are being deployed in your neighborhood.
+        </p>
+        <a href="#" class="cta-link">
+          Explore Map <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+      <div class="card-media map-preview">
+        <!-- Background graphic / mock dashboard overlay -->
+        <div class="hud-overlay top-right">
+          <div class="hud-item"><span class="bullet cyan"></span> ZONE A-04<br><small>Stability Check - Nominal</small></div>
+          <div class="hud-item"><span class="bullet cyan"></span> ZONE G-12<br><small>Transport Hub-Online</small></div>
+          <div class="hud-item"><span class="bullet green"></span> GRID STATUS<br><small>Stable</small></div>
+          <div class="hud-item"><span class="bullet yellow"></span> WEATHER<br><small>Clear, 18°C</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Two Columns Grid -->
+    <div class="cards-grid">
+
+      <!-- AI-Powered Routing Card -->
+      <div class="card">
+        <div class="card-content">
+          <div class="header-inline">
+            <div class="icon-badge">
+              <i data-lucide="bot"></i>
+            </div>
+            <h2>AI-Powered Routing</h2>
+          </div>
+          <p>
+            Issues are automatically categorized and routed to the correct municipal 
+            department instantly using our proprietary machine learning models.
+          </p>
+          <div class="media-banner routing-graphic">
+            <span class="tag">Report #8492</span>
+            <i data-lucide="arrow-right" class="arrow"></i>
+            <span class="tag tag-accent">Public Works</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-Time Tracking Card -->
+      <div class="card">
+        <div class="card-content">
+          <div class="header-inline">
+            <div class="icon-badge">
+              <i data-lucide="rotate-cw"></i>
+            </div>
+            <h2>Real-Time Tracking</h2>
+          </div>
+          <p>
+            Follow the exact status of your report from submission to resolution with live notifications.
+          </p>
+          
+          <div class="tracking-list">
+            <div class="tracking-item active">
+              <div class="status-info">
+                <span class="dot active"></span>
+                <span class="label">Received</span>
+              </div>
+              <span class="timestamp">09:41 AM</span>
+            </div>
+            <div class="tracking-item muted">
+              <div class="status-info">
+                <span class="dot"></span>
+                <span class="label">Dispatched</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+    <!-- Initialize Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
