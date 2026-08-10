@@ -4,5 +4,5 @@ from django.shortcuts import  render
 def home(request):
     return render(request,"website/index.html")
 
-def about(request):
-    return HttpResponse("This is my About page")
+def signin(request):
+    return render(request,"website/signin.html")
