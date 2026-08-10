@@ -6,3 +6,6 @@ def home(request):
 
 def signin(request):
     return render(request,"website/signin.html")
+
+def signup(request):
+    return render(request,"website/signup.html")
